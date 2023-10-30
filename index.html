@@ -19,6 +19,10 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!--Pendo Snippet-->
+    <script src="pendo-install.js"> </script>
+
+
 </head>
 
 <body id="page-top">
@@ -42,10 +46,11 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html" data-id="dashboard.nav.stuff">
+        <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -105,7 +110,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
+            <a class="collapse-item" href="register.html" target="_blank" >Register</a>
             <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
@@ -240,13 +245,24 @@
 
             <div class="table-container sc-iAyFgw gPlgsX sc-dnqmqq gXuRiM" data-table-name="explorerUiAssets">
             <div class="table-actions sc-htoDjs kxDkgK">
-              <button type="button" class="btn btn--tertiary" data-analytics-action="export-to-csv">
+              <button type="button" class="btn btn--tertiary" data-component="ComponentWrapper TableDeleteButton StyledSecondaryButton SecondaryButton Button">
                 <span>Export to CSV</span>
               </button>
             </div>
             </div>
 
-             <button>NOT ALWAYS HERE</button>
+            <!-- <div id="dropdown">
+            <label for="cars">Choose a car:</label>
+
+            <select name="cars" id="cars">
+              <option >Volvo</option>
+              <option >Saab</option>
+              <option >Mercedes</option>
+              <option >Audi</option>
+            </select>
+            <button id="sendButton">Send</button>
+          </div> -->
+
 
             <!-- Nav Item - Messages -->
             <li class="nav-item dropdown no-arrow mx-1">
@@ -332,6 +348,7 @@
                   Logout
                 </a>
               </div>
+                
             </li>
 
           </ul>
@@ -344,10 +361,21 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800" id="oe-campaign-settings-account-info-2000">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-id="1.0-Nav-Home.Dashboard"><i class="fas fa-download fa-sm text-white-50"></i> Leave Feedback</a>
+          
+          <div  class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800" id="dashboard-title">Dashboard</h1>
+      
+          
+            <!-- <button _ngcontent-jxf-c1004="" type="button" class="btn btn-link text-primary text-decoration-none text-start p-2 border rounded" style="min-height: 200px;">
+              <div _ngcontent-jxf-c1004="" class="thumbnail mb-2" style="background-color: green; min-height: 100px"></div>
+              <div _ngcontent-jxf-c1004="" class="text-break"> Interactive Student Edition eBook, Course 3 Volume 1</span>
+              </div>
+            </button> -->
+
           </div>
+          <!-- <div>
+            <input id="custId" name="custId" value="3487">
+          </div> -->
 
           <!-- Content Row -->
           <div class="row">
@@ -615,6 +643,14 @@
                 <div class="card-body">
                   <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
                   <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                  <p><button class="link_class">Add a thing</button></p>
+                  <p><button class="link_class">Add a thing</button></p>
+                  <p><button class="link_class">Add a thing</button></p>
+                  <p><button class="link_class" aria-label="sent_with_click">Add a thing</button></p>
+                  
+                
+                
+                
                 </div>
               </div>
 
@@ -630,8 +666,11 @@
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
+          <a id='myanchor' href='#'>anchor text</a>
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; Your Website 2019</span>
+           <p> <a href="/register.html">Register</a></p>
+           <p><a href="/register.html">OtherThing</a></p>
           </div>
         </div>
       </footer>
@@ -679,110 +718,7 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
 
-  <!-- Track Event Stuff -->
-   <script>
-   (function dropDownMenu() {
 
-    // Change the CSS selector in the parenthesis to match your select menu
-    var selectMenu = document.getElementById('dropdown');
-
-    var callback = function(e) {
-      var selectedOption = e.target.options[e.target.selectedIndex];
-      window.dataLayer.push({
-        event: 'selectionMade',
-        selectedElement: selectedOption
-      });
-    };
-
-  })();
-
-
-// </script>
-
- <!-- Pendo Scripts -->
-// <script>
-// WORKING NORMAL PENDO SCRIPT 
-(function(apiKey){
-    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-    v=['initialize','identify','updateOptions','pageLoad', 'trackEvents'];for(w=0,x=v.length;w<x;++w)(function(m){
-        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-        
-        // Call this whenever information about your visitors becomes available
-        // Please use Strings, Numbers, or Bools for value types.
-         pendo.initialize({
-            visitor: {
-                id:           'VISITOR-UNIQUE-ID',   // Required if user is logged in
-                email:        'hello@hello.com',
-                roles:        ['admin', 'test', 'user']
-            },
-
-            account: {
-                id:           'New Account', // Highly recommended
-                username:     'toddstoffer'
-            }
-        });
-
-})('5ba2118f-b462-47f9-66eb-e0eeddbf109d');
-</script>
-
-
-
-
- <!-- <script> 
-    // WORKING SEGMENT SCRIPT
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-        analytics.load("VXrEPSlhnbVxODjBTfrk0sbdU29jLcNd");
-        analytics.page();
-        
-        }}();
-  
-      analytics.identify("userId1", {
-        name: "Peter Gibbons", 
-        email: "peter@initech.com", 
-        group: "stoffer"
-      });
-      
-      analytics.group("0e8c78ea9d97a7b8185e8632", {
-        name: "Initech", 
-        industry: "Technology",
-        employees: 329, 
-        plan: "enterprise"
-      }); 
-  </script> -->
-
-  <!-- <script type="text/javascript">
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-    analytics.load("VXrEPSlhnbVxODjBTfrk0sbdU29jLcNd");
-    analytics.page();
-    }}();
-    
-    analytics.identify('newwwwwwwwwwww', {
-        groupId: 'groupsentwithidentify',
-       name: 'Michael Bolton',
-      email: 'mbolton@initech.com'
-    });
-    
-    analytics.group('SegmentAccount1', {
-      principles: ['Eckert', 'Mauchly'],
-      site: 'Eckert–Mauchly Computer Corporation',
-      statedGoals: 'Develop the first commercial computer',
-      industry: 'Technology'
-    });
-    
-    </script> -->
-
-    <!-- <script> 
-    // Claire's - THIS IS A WORKING SEGMENT SETUP DON'T DELETE THIS 
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-        analytics.load("VXrEPSlhnbVxODjBTfrk0sbdU29jLcNd");
-        analytics.page();
-        analytics.identify('visitorTest', { user_id: 'testUser'})
-        analytics.group('testing')
-        
-              }}();
-  </script> -->
 
 </body>
 

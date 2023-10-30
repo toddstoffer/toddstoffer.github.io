@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <!-- <meta http-equiv="Content-Security-Policy" content="script-src localhost:8000 pendo-io-static.storage.googleapis.com cdn.pendo.io pendo-static-4802463602049024.storage.googleapis.com data.pendo.io;
+
+  connect-src app.pendo.io data.pendo.io pendo-static-4802463602049024.storage.googleapis.com; frame-ancestors app.pendo.io;"> -->
 
   <title>SB Admin 2 - Register</title>
 
@@ -17,6 +20,9 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!--Pendo Snippet-->
+  <script src="pendo-install.js"> </script>
 
 </head>
 
@@ -77,32 +83,7 @@
         </div>
       </div>
     </div>
-    <script>
-      // WORKING NORMAL PENDO SCRIPT 
-    (function(apiKey){
-        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-        v=['initialize','identify','updateOptions','pageLoad', 'trackEvents'];for(w=0,x=v.length;w<x;++w)(function(m){
-            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-            y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-    
-            // Call this whenever information about your visitors becomes available
-            // Please use Strings, Numbers, or Bools for value types.
-             pendo.initialize({
-                visitor: {
-                    id:           'new-local-user',   // Required if user is logged in
-                    email:        'new@user.com',
-                    roles:        ['admin', 'test', 'user']
-                },
-    
-                account: {
-                    id:           'ACCOUNT-UNIQUE-ID', // Highly recommended
-                    username:     'toddstoffer'
-                }
-            });
-    
-    })('5ba2118f-b462-47f9-66eb-e0eeddbf109d');
-    </script>
+<div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
