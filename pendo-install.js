@@ -13,8 +13,8 @@
 //<--Set Additional API-->
           // additionalApiKey: ['d3c3d222-0e6d-4e3c-67bb-3b2de493f9aa'],
             visitor: {
-                id:             'static-visitor-id',
-                // email:          'john@acmecorp.com',
+                id:             'static-visitor-id3',
+                newList:         'Pendo Employee',
                 // full_name:      'John Acme',
                 // tags:           [{"Persona":'Product Manager'}],
             },
