@@ -17,7 +17,28 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<script>
+  (function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+    v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+        
+        
+        pendo.initialize({
+//<--Set Additional API-->
+          // additionalApiKey: ['d3c3d222-0e6d-4e3c-67bb-3b2de493f9aa'],
+            visitor: {
+                id:            'todd-visitor-id',
+                role:           'admin',
+                historicalField: 'value1', 
+                customerLanguage: 'en_US'
+            },
+        });
 
+})('5ba2118f-b462-47f9-66eb-e0eeddbf109d');
+</script>
 </head>
 
 <body id="page-top">
@@ -332,7 +353,7 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          <h1 class="h3 mb-4 text-gray-800">iframe Testing Page</h1>
 
         </div>
         <!-- /.container-fluid -->
