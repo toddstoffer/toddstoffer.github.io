@@ -15,6 +15,7 @@
             visitor: {
                 id:             'static-visitor-id3',
                 newList:         'Pendo Employee',
+                historical:       'PromotedField'
                 // full_name:      'John Acme',
                 // tags:           [{"Persona":'Product Manager'}],
             },
