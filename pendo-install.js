@@ -26,7 +26,6 @@
                 // is_paying:       true,
                 // tags:           ['enterprise'],
             } ,
-            cookieDomain: 'github.io'
 //<--Set Location API-->
             // location: {
             //     transforms: [annotateAddTransform]
